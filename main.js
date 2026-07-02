@@ -5,7 +5,7 @@ const checkbox = document.querySelectorAll('.checkbox');
 const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const letrasMinusculas = 'abcdefghijklmnopqrstuvxywz';
 const numeros = '0123456789';
-const simbolos = '!@%*?#¨&+-.';
+const simbolos = '!@%*?#¨)&+-.(';
 
 let tamanhoSenha = 12;
 numeroSenha.textContent = tamanhoSenha;
@@ -57,5 +57,7 @@ function geraSenha(){
     for (let i = 0; i < tamanhoSenha; i++){
         let numeroAleatorio = Math.floor(Math.random() * alfabeto.length);
         senha += alfabeto[numeroAleatorio];
-    };
+    }
+
+    campoSenha.value = senha;
 }
